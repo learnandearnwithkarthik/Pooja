@@ -35,19 +35,19 @@ Welcome to **Bake & Brew**, a modern cafe web application where customers can br
 
 ## 🧪 Setup Instructions
 
-1. Clone the Repository
+### 1. Clone the Repository
  ```bash
   git clone https://github.com/your-username/bake-and-brew.git
   cd bake-and-brew
 
 ```
-2. Install Dependencies on both frontend and backend
+### 2. Install Dependencies on both frontend and backend
 
  ```bash
   npm install
 
 ```
-3. Create .env file in backend and add
+### 3. Create .env file in backend and add
 
  ```bash
   PORT=8000
@@ -58,7 +58,7 @@ Welcome to **Bake & Brew**, a modern cafe web application where customers can br
   CLOUDINARY_API_SECRET=your_api_secret
 
 ```
-4. Then run backend and frontend server
+### 4. Then run backend and frontend server
 
  ```bash
   cd backend
