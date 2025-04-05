@@ -37,8 +37,7 @@ Welcome to **Bake & Brew**, a modern cafe web application where customers can br
 
 ### 1. Clone the Repository
  ```bash
-  git clone https://github.com/your-username/bake-and-brew.git
-  cd bake-and-brew
+  git clone https://github.com/gagan723/BakeNBrew-cafe-website.git
 
 ```
 ### 2. Install Dependencies on both frontend and backend
