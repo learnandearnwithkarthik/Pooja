@@ -4,7 +4,7 @@ import PasswordInput from "../components/input/PasswordInput";
 import { validateEmail } from "../utils/Helper";
 import SignUp from "./SignUp";
 import toast from "react-hot-toast";
-import axiosInstance from "../../../backend/utils/axiosInstance";
+import axiosInstance from "../utils/axiosInstance";
 import { UserContext } from "../../context/UserContext"; // Import UserContext
 
 const Login = ({ setShowLogin }) => {
