@@ -1,6 +1,6 @@
 // src/context/CartContext.jsx
 import { createContext, useContext, useEffect, useState } from "react";
-import axiosInstance from "../../backend/utils/axiosInstance";
+import axiosInstance from "../src/utils/axiosInstance";
 import { UserContext } from "./UserContext";
 import toast from "react-hot-toast";
 
