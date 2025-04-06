@@ -20,7 +20,7 @@ const Navbar = ({ setShowLogin }) => {
   const onLogout = () => {
     localStorage.clear();
     setUser(null);  // Clear user context after logout
-    setCartItems([]); // Reset cart items
+//    setCartItems([]); // Reset cart items
     navigate('/');  // Navigate to home page
     toast.success("Logout successful")
   };
