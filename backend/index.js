@@ -15,7 +15,7 @@ mongoose
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow only your frontend
+    origin: "https://bakenbrew-cafe-website-frontend.onrender.com", // Allow only your frontend
     credentials: true, // Allow cookies and authentication headers
     methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
