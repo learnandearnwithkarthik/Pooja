@@ -38,9 +38,6 @@ const Navbar = ({ setShowLogin }) => {
             Bake & <span className="text-primary">Brew</span>
           </p>
         </div>
-        {console.log(user)
-        }
-        
 
         <div className="flex items-center justify-center gap-4">
           <ul className="hidden sm:flex gap-6">
