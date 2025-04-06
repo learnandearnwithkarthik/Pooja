@@ -1,8 +1,7 @@
 import axios from "axios";
-import { BASE_URL } from "./constants";
 
 const axiosInstance = axios.create({
-    baseURL: BASE_URL,
+    baseURL: "https://bakenbrew-cafe-website-backend.onrender.com",
     timeout: 10000,
     // withCredentials: true, // ✅ Ensure credentials are included
     headers: {
