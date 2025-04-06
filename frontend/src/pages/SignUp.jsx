@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { validateEmail } from "../utils/Helper";
 import { useNavigate } from "react-router-dom";
-import axiosInstance from "../../../backend/utils/axiosInstance";
+import axiosInstance from "../utils/axiosInstance";
 import { toast } from "react-hot-toast";
 
 const SignUp = ({ setShowSignUp, setShowLogin }) => {
