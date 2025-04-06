@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { CiShoppingBasket } from 'react-icons/ci';
 import { UserContext } from '../../context/UserContext';
 import { useCart } from '../../context/CartContext';
-
+import toast from 'react-hot-toast';
 
 const Navbar = ({ setShowLogin }) => {
   const navigate = useNavigate();
@@ -22,6 +22,7 @@ const Navbar = ({ setShowLogin }) => {
     setUser(null);  // Clear user context after logout
     setCartItems([]); // Reset cart items
     navigate('/');  // Navigate to home page
+    toast.success("Logout successful")
   };
 
   return (
