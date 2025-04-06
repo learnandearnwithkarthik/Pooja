@@ -1,1 +1,1 @@
-export const BASE_URL = "http://localhost:8000"
+export const BASE_URL = "https://bakenbrew-cafe-website-backend.onrender.com"
