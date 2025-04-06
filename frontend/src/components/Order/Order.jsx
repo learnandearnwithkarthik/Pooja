@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { menu_list } from "../../data";
 import MenuCard from "./MenuCard";
 import { UserContext } from "../../../context/UserContext";
-import axiosInstance from "../../../../backend/utils/axiosInstance";
+import axiosInstance from "../../utils/axiosInstance";
 
 const Order = ({ setShowLogin }) => {
 	const [category, setCategory] = useState("Coffee Selection");
