@@ -3,6 +3,8 @@
 Welcome to **Bake & Brew**, a modern cafe web application where customers can browse the menu, reserve tables, place orders, and enjoy a personalized experience. It also includes a dedicated admin panel for managing menu items.
 
 ---
+## Deployed link
+ - https://bakenbrew-cafe-website-frontend.onrender.com
 
 ## 🔥 Features
 
