@@ -9,7 +9,7 @@ Welcome to **Bake & Brew**, a modern cafe web application where customers can br
 ## 🔥 Features
 
 ### 👥 Users
-- Popup-based Login / Signup
+- Popup-based Login / Signup with jwt authentication
 - Browse menu with food images
 - Add/remove items from cart
 - View order summary with subtotal + delivery
