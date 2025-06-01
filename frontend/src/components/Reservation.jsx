@@ -12,15 +12,8 @@ const Reservation = ({setShowLogin}) => {
 	const { user } = useContext(UserContext); // Access the user context
 	const navigate = useNavigate();
 
-	// Check if the user exists in localStorage or sessionStorage
-	useEffect(() => {
-		// If no user and not logged in, redirect to login
-		if (!user && !localStorage.getItem("token")) {
-			setShowLogin(true);
-		}
-	}, [user, navigate]);
-
 	const handleReservation = () => {
+		
 		// Basic validation
 		if (!noOfPeople || !date || !time) {
 			toast.error("Please fill in all fields.");
@@ -36,6 +29,14 @@ const Reservation = ({setShowLogin}) => {
 			toast.error("Date cannot be in the past.");
 			return;
 		}
+
+		// Check if the user is logged in
+		if (!user && !localStorage.getItem("token")){
+			setShowLogin(true)
+			toast.error("Please login to reserve a table")
+			return;
+		}
+
 		setDate("")
 		setNoOfPeople("")
 		setTime("")

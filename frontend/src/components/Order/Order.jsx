@@ -81,6 +81,7 @@ const Order = ({ setShowLogin }) => {
 						title={item.name}
 						description={item.description}
 						price={item.price}
+						setShowLogin={setShowLogin}
 					/>
 				))}
 			</div>

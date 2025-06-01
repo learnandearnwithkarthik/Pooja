@@ -2,8 +2,10 @@ import React, { useContext, useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { UserContext } from "../../../context/UserContext";
 import { useCart } from "../../../context/CartContext";
+import toast from "react-hot-toast";
 
-const MenuCard = ({ imgSrc, title, description, price, handleDelete }) => {
+
+const MenuCard = ({ imgSrc, title, description, price, handleDelete,setShowLogin }) => {
 	const [quantity, setQuantity] = useState(1);
 	const { user } = useContext(UserContext);
 	const {addToCart} = useCart()
@@ -15,6 +17,13 @@ const MenuCard = ({ imgSrc, title, description, price, handleDelete }) => {
 	};
 
 	const handleAddToCart = () => {
+
+		if (!user && !localStorage.getItem("token")) {
+				setShowLogin?.(true); // Optional chaining in case not passed
+				toast.error("Please login to add items to cart");
+				return;
+			}
+
 		const item = { title, description, imgSrc, price, quantity };
 		addToCart(item);
 		setQuantity(1)
