@@ -15,10 +15,7 @@ const Order = ({ setShowLogin }) => {
 	// Redirect to login page if user is not logged in
 	useEffect(() => {
 		if (loading) return; // Don't run the check while loading
-		if (!user && !localStorage.getItem("token")) {
-			setShowLogin(true);
-		}
-	}, [user, navigate, loading]);
+	}, [loading]);
 
 	// Update URL with the category query parameter
 	useEffect(() => {
