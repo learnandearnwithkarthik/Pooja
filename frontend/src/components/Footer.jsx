@@ -51,7 +51,7 @@ const Footer = () => {
       {/* Bottom Strip */}
       <div className="w-full py-4 border-t border-border flex items-center justify-center">
         <span className="font-Source text-sm text-fill font-light text-center px-4">
-          © 2024 Bake & Brew. Developed by Gagan G
+          © 2024 Bake & Brew. Developed by Gagan G.
         </span>
       </div>
     </div>
