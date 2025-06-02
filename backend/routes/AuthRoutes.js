@@ -19,7 +19,7 @@ router.get('/', test)
 router.post('/register', registerUser)
 router.post('/login', loginUser)
 router.get('/get-user',authenticateToken,getUser)
-router.get('/get-items',authenticateToken,getItems)
+router.get('/get-items',getItems)
 router.get('/get-cart',authenticateToken,getCart)
 router.put('/update-cart',authenticateToken,setCart)
 router.post("/add-item", upload.single("image"), addFoodItem); // Image is uploaded as 'image'
