@@ -12,11 +12,6 @@ const Order = ({ setShowLogin }) => {
 	const [loading, setLoading] = useState(true); // Add loading state
 	const navigate = useNavigate();
 
-	// Redirect to login page if user is not logged in
-	useEffect(() => {
-		if (loading) return; // Don't run the check while loading
-	}, [loading]);
-
 	// Update URL with the category query parameter
 	useEffect(() => {
 		navigate(`?category=${category}`);
@@ -38,14 +33,13 @@ const Order = ({ setShowLogin }) => {
 
 	// Re-render (fetch items) when category changes & Set loading state to false when the component is ready
 	useEffect(() => {
-		setLoading(false);
-		fetchMenuItems(category);
-	}, [category]);
+		const loadMenu = async () => {
+			await fetchMenuItems(category); // Wait for data
+			setLoading(false); // Only stop loading after data is ready
+		};
 
-	// If still loading or user is not logged in, return null to prevent rendering
-	if (loading) {
-		return null; // Avoid rendering if no user is logged in
-	}
+		loadMenu();
+	}, [category]);
 
 	return (
 		<>
@@ -70,8 +64,12 @@ const Order = ({ setShowLogin }) => {
 			</div>
 
 			{/* Order Card */}
-			<div className="grid grid-cols-3 m-10 mx-20">
-				{menuItems.map((item, index) => (
+			{loading ? (
+				<div className="col-span-3 flex justify-center items-center min-h-[300px]">
+					<div className="spinner"></div>
+				</div>
+			) : menuItems.length > 0 ? (
+				menuItems.map((item, index) => (
 					<MenuCard
 						key={index}
 						imgSrc={item.image}
@@ -80,8 +78,12 @@ const Order = ({ setShowLogin }) => {
 						price={item.price}
 						setShowLogin={setShowLogin}
 					/>
-				))}
-			</div>
+				))
+			) : (
+				<div className="col-span-3 text-center text-gray-500 text-lg self-center">
+					No items found for this category.
+				</div>
+			)}
 		</>
 	);
 };
