@@ -65,11 +65,12 @@ const Order = ({ setShowLogin }) => {
 
 			{/* Order Card */}
 			{loading ? (
-				<div className="col-span-3 flex justify-center items-center min-h-[300px]">
+				<div className="col-span-3 flex justify-center items-center min-h-[400px]">
 					<div className="spinner"></div>
 				</div>
 			) : menuItems.length > 0 ? (
-				menuItems.map((item, index) => (
+				<div className="grid grid-cols-3 m-10 mx-20 ">
+				{menuItems.map((item, index) => (
 					<MenuCard
 						key={index}
 						imgSrc={item.image}
@@ -78,7 +79,8 @@ const Order = ({ setShowLogin }) => {
 						price={item.price}
 						setShowLogin={setShowLogin}
 					/>
-				))
+				))}
+				</div>
 			) : (
 				<div className="col-span-3 text-center text-gray-500 text-lg self-center">
 					No items found for this category.
