@@ -43,7 +43,7 @@ const Order = ({ setShowLogin }) => {
 	}, [category]);
 
 	// If still loading or user is not logged in, return null to prevent rendering
-	if (loading || (!user && !localStorage.getItem("token"))) {
+	if (loading) {
 		return null; // Avoid rendering if no user is logged in
 	}
 
