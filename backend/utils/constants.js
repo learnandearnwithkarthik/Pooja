@@ -1,1 +1,1 @@
-export const BASE_URL = "https://bakenbrew-cafe-website-backend.onrender.com"
+export const BASE_URL = "https://backend-1n59.onrender.com"
