@@ -9,7 +9,7 @@ const { authenticateToken } = require("../utils/utilities");
 router.use(
     cors({
         credentials: true,
-        origin: 'https://bakenbrew-cafe-website-frontend.onrender.com'
+        origin: 'https://frontend-qn0v.onrender.com'
     })
 )
 
