@@ -15,10 +15,10 @@ mongoose
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://frontend-qn0v.onrender.com", // Allow only your frontend
-    credentials: true, // Allow cookies and authentication headers
-    methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
-    allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
+    origin: "https://frontend-qn0v.onrender.com",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
